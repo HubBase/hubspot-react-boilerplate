@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Card.scss';
+import { CardContainer, Button } from './styles';
 
 function Card({ initialClickCount }) {
   const [clickCount, setClickCount] = useState(initialClickCount);
@@ -7,18 +7,18 @@ function Card({ initialClickCount }) {
     `${n !== 1 ? 'are' : 'is'} ${n} ${noun + (n !== 1 ? suffix : '')}`;
 
   return (
-    <div className="cms-react-boilerplate__card">
+    <CardContainer>
       <p>
         {`There ${
           clickCount > 0
             ? pluralize(clickCount, 'reason', 's')
             : 'are so many reasons'
-        } to use HubSpot CMS + React!`}
+        } to use HubSpot CMS + React! <3 <3`}
       </p>
-      <button className="btn" onClick={() => setClickCount(clickCount + 1)}>
-        Click me!
-      </button>
-    </div>
+      <Button  onClick={() => setClickCount(clickCount + 1)}>
+        Add Reason!
+      </Button>
+    </CardContainer>
   );
 }
 

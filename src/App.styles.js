@@ -1,4 +1,5 @@
-.cms-react-boilerplate__container {
+import styled from 'styled-components';
+export const Container = styled.div`
   text-align: center;
   background-color: #282c34;
   display: flex;
@@ -7,4 +8,4 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+`

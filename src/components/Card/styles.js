@@ -1,10 +1,13 @@
-.cms-react-boilerplate__card {
+import styled from 'styled-components';
+
+export const CardContainer = styled.div`
   max-width: 500px;
   margin-bottom: 40px;
   padding: 0.5em 1em;
   background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 6px;
-  .btn {
+  border-radius: 6px;`;
+
+export const Button = styled.button`  
     border: 1px solid #ff7a59;
     background-color: #ff7a59;
     border-radius: 3px;
@@ -26,5 +29,4 @@
       color: #ffffff;
       cursor: pointer;
     }
-  }
-}
+`

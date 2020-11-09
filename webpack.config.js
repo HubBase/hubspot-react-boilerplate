@@ -28,7 +28,7 @@ const hubspotConfig = ({ portal, autoupload } = {}) => {
           },
         },
         {
-          test: /\.s[ac]ss$/i,
+          test: /\.css$/i,
           use: [
             MiniCssExtractPlugin.loader,
             { loader: 'css-loader', options: { url: false } },
@@ -37,8 +37,7 @@ const hubspotConfig = ({ portal, autoupload } = {}) => {
               options: {
                 plugins: () => [autoprefixer()]
               }
-            },
-            'sass-loader',
+            }
           ],
         },
         {
